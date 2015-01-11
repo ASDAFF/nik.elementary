@@ -41,7 +41,7 @@ class nik_elementary extends CModule
 	function DoUninstall()
 	{
         UnRegisterModule('nik.elementary');
-        UnRegisterModuleDependences('iblock', 'OnIBlockPropertyBuildList', 'nik.elementary', 'EventsLog', 'GetUserTypeDescription');
-        UnRegisterModuleDependences('iblock', 'OnIBlockPropertyBuildList', 'nik.elementary', 'WhoCreate', 'GetUserTypeDescription');
+        UnRegisterModuleDependences('iblock', 'OnIBlockPropertyBuildList', 'nik.elementary', 'Nik\Elementary\EventsLog', 'getUserTypeDescription');
+        UnRegisterModuleDependences('iblock', 'OnIBlockPropertyBuildList', 'nik.elementary', 'Nik\Elementary\WhoCreate', 'getUserTypeDescription');
 	}
 }

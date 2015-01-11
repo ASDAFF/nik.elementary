@@ -1,0 +1,14 @@
+<?php
+
+$MESS['ELEMENTARY_EVENTSLOG_DESCRIPTION'] = 'Журнал событий';
+$MESS['ELEMENTARY_EVENTSLOG_ELEMENT_ADD'] = 'Элемент создан';
+$MESS['ELEMENTARY_EVENTSLOG_ELEMENT_EDIT'] = 'Изменён';
+$MESS['ELEMENTARY_EVENTSLOG_TODAY'] = 'Сегодня';
+$MESS['ELEMENTARY_EVENTSLOG_YESTERDAY'] = 'Вчера';
+$MESS['ELEMENTARY_EVENTSLOG_MORE'] = 'Показать всё &#8595;';
+$MESS['ELEMENTARY_EVENTSLOG_TURN'] = 'Свернуть список &#8593;';
+$MESS['ELEMENTARY_EVENTSLOG_EVENTS_LOG_EMPTY'] = 'журнал событий пуст';
+$MESS['ELEMENTARY_EVENTSLOG_EVENTS_LOG_EMPTY_HINT'] = 'Проверьте, включено ли ведение журнала событий в настройках инфоблока';
+$MESS['ELEMENTARY_EVENTSLOG_IP'] = 'IP-адрес';
+$MESS['ELEMENTARY_EVENTSLOG_USER_AGENT'] = 'User Agent';
+$MESS['ELEMENTARY_EVENTSLOG_DETAILS'] = 'Детали';

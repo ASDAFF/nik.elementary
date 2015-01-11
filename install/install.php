@@ -23,9 +23,24 @@ if (version_compare(SM_VERSION, '14.0.0') < 0)
 }
 else
 {
+    $updatesDir = __DIR__.'/../_updates';
+
     RegisterModule('nik.elementary');
-    RegisterModuleDependences('iblock', 'OnIBlockPropertyBuildList', 'nik.elementary', 'EventsLog', 'GetUserTypeDescription');
-    RegisterModuleDependences('iblock', 'OnIBlockPropertyBuildList', 'nik.elementary', 'WhoCreate', 'GetUserTypeDescription');
+    RegisterModuleDependences('iblock', 'OnIBlockPropertyBuildList', 'nik.elementary', 'Nik\Elementary\EventsLog', 'getUserTypeDescription');
+    RegisterModuleDependences('iblock', 'OnIBlockPropertyBuildList', 'nik.elementary', 'Nik\Elementary\WhoCreate', 'getUserTypeDescription');
+
+    if ($updatesVersions = scandir($updatesDir))
+    {
+        foreach ($updatesVersions as $version)
+        {
+            $updater = $updatesDir.DIRECTORY_SEPARATOR.$version.DIRECTORY_SEPARATOR.'updater.php';
+
+            if (is_file($updater))
+            {
+                include $updater;
+            }
+        }
+    }
 
     CAdminMessage::ShowNote(GetMessage('ELEMENTARY_INSTALL_COMPLETE_TITLE'));
     echo GetMessage('ELEMENTARY_INSTALL_COMPLETE_MESSAGE');
